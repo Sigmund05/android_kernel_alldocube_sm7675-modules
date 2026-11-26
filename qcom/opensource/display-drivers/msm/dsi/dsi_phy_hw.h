@@ -122,6 +122,8 @@ struct dsi_phy_per_lane_cfgs {
  * @phy_type:         Phy-type (Dphy/Cphy).
  * @bit_clk_rate_hz: DSI bit clk rate in HZ.
  * @split_link:       DSI split link config data.
+ * @glbl_rescode_top_ctrl: C-PHY global rescode offset for pull-up legs.
+ * @glbl_rescode_bot_ctrl: C-PHY global rescode offset for pull-down legs.
  */
 struct dsi_phy_cfg {
 	struct dsi_phy_per_lane_cfgs lanecfg;
@@ -136,6 +138,8 @@ struct dsi_phy_cfg {
 	unsigned long bit_clk_rate_hz;
 	struct dsi_split_link_config split_link;
 	u32 data_lanes;
+	u32 glbl_rescode_top_ctrl;
+	u32 glbl_rescode_bot_ctrl;
 };
 
 struct dsi_phy_hw;
